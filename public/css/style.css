@@ -1,0 +1,14 @@
+*{
+    margin:0px;
+}
+.card{
+    width:19rem;
+}
+.card img{
+    width: 100%;
+    height:200px;
+}
+.inactive img{
+    width:100px;
+    height:100px;
+}
