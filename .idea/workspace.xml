@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c4ae99c-6c94-4835-9c7f-8ec0109bcb9b" name="Default Changelist" comment="install laravel">
-      <change afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/all_posts.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/all_users.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/content.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/create_blog.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/inactive_blog.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/login.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/my_posts.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/posts.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/register.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/auth/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/auth/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/register.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +14,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -165,7 +158,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617999786034</updated>
-      <workItem from="1617999787389" duration="10700000" />
+      <workItem from="1617999787389" duration="11023000" />
+      <workItem from="1618074050314" duration="1401000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel">
       <created>1618000075205</created>
@@ -196,6 +190,10 @@
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="519" y="284" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1504.963@0.0.1504.963" timestamp="1618007709512" />
+    <state x="483" y="237" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1618074965508">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="483" y="237" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1504.963@0.0.1504.963" timestamp="1618074965508" />
     <state x="533" y="223" key="FileChooserDialogImpl" timestamp="1617999970293">
       <screen x="0" y="0" width="1504" height="963" />
     </state>

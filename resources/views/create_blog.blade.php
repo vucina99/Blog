@@ -23,22 +23,43 @@
                     <div class="pb-4 text-center">
                         <h1 >Create post</h1>
                     </div>
-                    <form method="post" action="/create/post">
+                    <form method="post" action="/post/create" enctype="multipart/form-data">
                         @csrf
+
+                        @if( Session()->has( 'successMessage' ))
+                            <div class="alert alert-success" role="alert">
+                            {{ Session()->get( 'successMessage' ) }}
+                            </div>
+                        @endif
                         <div class="form-group">
                             <label for="title">TITLE</label>
                             <input type="text" class="form-control" id="title" name="title" placeholder="Your title">
+                            @error("title")
+                            <span class="text-danger">
+                                {{$message}}
+                            </span>
+                            @enderror
                         </div>
                         <br>
                         <div class="form-group">
                             <label for="description">DESCRIPTION</label>
                             <textarea name="description" class="form-control" id="description" cols="30" rows="10" placeholder="Your description"></textarea>
                         </div>
+                        @error("description")
+                          <span class="text-danger">
+                                {{$message}}
+                          </span>
+                        @enderror
                         <br>
                         <div class="form-group">
                             <label for="image">IMAGE</label> <br>
                             <input type="file" name="image" id="image" >
                         </div>
+                          @error("image")
+                           <span class="text-danger">
+                          {{$message}}
+                          </span>
+                                @enderror
                         <br> <br>
                         <input type="submit" class="btn btn-outline-primary w-100 " value="CREATE">
                     </form>

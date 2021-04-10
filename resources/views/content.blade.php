@@ -31,21 +31,22 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
             @if(!Auth::check())
-                <a class="nav-item nav-link active" href="#">Home </a>
-                <a class="nav-item nav-link active" href="#">Login </a>
-                <a class="nav-item nav-link active" href="#">Register </a>
+                <a class="nav-item nav-link active" href="/">Home </a>
+                <a class="nav-item nav-link active" href="/login">Login </a>
+                <a class="nav-item nav-link active" href="/register">Register </a>
 
             @endif
             @if(Auth::check() && Auth::user()->is_admin  == 0)
+                <a class="nav-item nav-link active" href="/">Home </a>
                 <a class="nav-item nav-link active" href="#">Create Blog</a>
                 <a class="nav-item nav-link active" href="#">My Blogs</a>
-                <a class="nav-item nav-link active" href="#">Logout</a>
+                <a class="nav-item nav-link active" href="/logout">Logout</a>
             @endif
 
             @if(Auth::check() && Auth::user()->is_admin  == 1)
                <a class="nav-item nav-link active" href="#">All User</a>
                <a class="nav-item nav-link active" href="#">Inactive Blogs</a>
-               <a class="nav-item nav-link active" href="#">Logout</a>
+               <a class="nav-item nav-link active" href="/logout">Logout</a>
 
 
                 @endif
