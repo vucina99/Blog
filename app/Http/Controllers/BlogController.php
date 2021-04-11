@@ -35,7 +35,7 @@ class BlogController extends Controller
         $request->file("image")->move(public_path('/blogImage'), $imageName);
         $post->image = $imageName;
 
-        $post->user_id = 1;
+        $post->user_id = Auth::user()->id;
 
         $post->save();
 
@@ -99,6 +99,16 @@ class BlogController extends Controller
     }
 
     public function showPost($id){
+
+        if(Auth::check() && Auth::user()->is_admin == 1){
+            $post = Blog::find($id);
+            $countPosts = Blog::where("active" , 0)->count();
+            if(!$post){
+                return back();
+            }
+
+            return view("showPost" , compact("post", "countPosts"));
+        }
         $post = Blog::find($id);
 
         if(!$post){

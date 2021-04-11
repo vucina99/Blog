@@ -11,7 +11,7 @@ class AdminController extends Controller
 {
     public function allUsers(){
         $countPosts = Blog::where("active" , 0)->count();
-        $users = User::where("id" , "=" , Auth::user()->id)->simplePaginate(15);
+        $users = User::where("id" , "!=" , Auth::user()->id)->simplePaginate(15);
         return view("all_users" , compact("users" , "countPosts"));
     }
 

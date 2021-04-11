@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6c4ae99c-6c94-4835-9c7f-8ec0109bcb9b" name="Default Changelist" comment="install laravel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +175,7 @@
       <updated>1617999786034</updated>
       <workItem from="1617999787389" duration="11023000" />
       <workItem from="1618074050314" duration="6028000" />
-      <workItem from="1618132848243" duration="17442000" />
+      <workItem from="1618132848243" duration="19299000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel">
       <created>1618000075205</created>
@@ -227,10 +229,10 @@
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="345" y="215" key="Vcs.Push.Dialog.v2/0.0.1504.963@0.0.1504.963" timestamp="1618000173385" />
-    <state x="459" y="214" width="587" height="558" key="find.popup" timestamp="1618151677630">
+    <state x="459" y="214" width="587" height="558" key="find.popup" timestamp="1618153763275">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="459" y="214" width="587" height="558" key="find.popup/0.0.1504.963@0.0.1504.963" timestamp="1618151677630" />
+    <state x="459" y="214" width="587" height="558" key="find.popup/0.0.1504.963@0.0.1504.963" timestamp="1618153763275" />
     <state x="555" y="388" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1618000038071">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
