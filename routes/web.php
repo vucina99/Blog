@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\auth\AuthController;
 use \App\Http\Controllers\BlogController;
+use \App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +17,12 @@ use \App\Http\Controllers\BlogController;
 
 
 Route::get("/", [BlogController::class, 'home']);
-Route::get("/create/post", [BlogController::class, 'createPost']);
-Route::post("/post/create", [BlogController::class, 'postCreate']);
+
+Route::get("/show/post/{id}", [BlogController::class, 'showPost']);
 
 Route::middleware(["auth"])->group(function(){
     Route::get("/logout", [AuthController::class, 'logout']);
-
+    Route::post("/notaccept", [BlogController::class, 'notAccept']);
 });
 
 
@@ -34,9 +35,20 @@ Route::middleware(["guest"])->group(function(){
 });
 
 Route::middleware(["AdminMiddle"])->group(function(){
+    Route::get("/all/users", [AdminController::class, 'allUsers']);
+    Route::get("/inactive/posts", [AdminController::class, 'inactiveBlog']);
+    Route::post("/accept/post", [AdminController::class, 'acceptPost']);
+    Route::get("/all/posts", [AdminController::class, 'allPosts']);
+
 
 });
 
 Route::middleware(["UserMiddle"])->group(function(){
+    Route::get("/create/post", [BlogController::class, 'createPost']);
+    Route::post("/post/create", [BlogController::class, 'postCreate']);
+    Route::get("/my/posts", [BlogController::class, 'myPosts']);
+
+    Route::get("/edit/post", [BlogController::class, 'editPost']);
+    Route::post("/post/edit", [BlogController::class, 'postEdit']);
 
 });

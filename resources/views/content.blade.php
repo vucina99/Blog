@@ -38,14 +38,16 @@
             @endif
             @if(Auth::check() && Auth::user()->is_admin  == 0)
                 <a class="nav-item nav-link active" href="/">Home </a>
-                <a class="nav-item nav-link active" href="#">Create Blog</a>
-                <a class="nav-item nav-link active" href="#">My Blogs</a>
+                <a class="nav-item nav-link active" href="/create/post">Create Post</a>
+                <a class="nav-item nav-link active" href="/my/posts">My Posts</a>
                 <a class="nav-item nav-link active" href="/logout">Logout</a>
             @endif
 
             @if(Auth::check() && Auth::user()->is_admin  == 1)
-               <a class="nav-item nav-link active" href="#">All User</a>
-               <a class="nav-item nav-link active" href="#">Inactive Blogs</a>
+               <a class="nav-item nav-link active" href="/">Home </a>
+               <a class="nav-item nav-link active" href="/all/users">All Users</a>
+                    <a class="nav-item nav-link active" href="/all/posts">All Posts</a>
+               <a class="nav-item nav-link active" href="/inactive/posts">Inactive Posts <span class="badge text-dark bg-light bg-secondary">{{$countPosts}}</span></a>
                <a class="nav-item nav-link active" href="/logout">Logout</a>
 
 

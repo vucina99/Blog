@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="6c4ae99c-6c94-4835-9c7f-8ec0109bcb9b" name="Default Changelist" comment="install laravel">
+      <change afterPath="$PROJECT_DIR$/resources/views/editMyPost.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/showPost.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/auth/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/auth/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/register.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/all_posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/all_posts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/all_users.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/all_users.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/content.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/content.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inactive_blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/inactive_blog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/my_posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/my_posts.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +186,8 @@
       <option name="presentableId" value="Default" />
       <updated>1617999786034</updated>
       <workItem from="1617999787389" duration="11023000" />
-      <workItem from="1618074050314" duration="1401000" />
+      <workItem from="1618074050314" duration="6028000" />
+      <workItem from="1618132848243" duration="14881000" />
     </task>
     <task id="LOCAL-00001" summary="install laravel">
       <created>1618000075205</created>
@@ -181,6 +209,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="install laravel" />
     <option name="LAST_COMMIT_MESSAGE" value="install laravel" />
@@ -194,17 +233,29 @@
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="483" y="237" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1504.963@0.0.1504.963" timestamp="1618074965508" />
-    <state x="533" y="223" key="FileChooserDialogImpl" timestamp="1617999970293">
+    <state x="533" y="223" key="FileChooserDialogImpl" timestamp="1618075705119">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="533" y="223" key="FileChooserDialogImpl/0.0.1504.963@0.0.1504.963" timestamp="1617999970293" />
+    <state x="533" y="223" key="FileChooserDialogImpl/0.0.1504.963@0.0.1504.963" timestamp="1618075705119" />
     <state x="345" y="215" key="Vcs.Push.Dialog.v2" timestamp="1618000173385">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="345" y="215" key="Vcs.Push.Dialog.v2/0.0.1504.963@0.0.1504.963" timestamp="1618000173385" />
+    <state x="459" y="214" width="587" height="534" key="find.popup" timestamp="1618147001840">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="459" y="214" width="587" height="534" key="find.popup/0.0.1504.963@0.0.1504.963" timestamp="1618147001840" />
     <state x="555" y="388" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1618000038071">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="555" y="388" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1504.963@0.0.1504.963" timestamp="1618000038071" />
+    <state x="409" y="222" key="run.anything.popup" timestamp="1618139287957">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="409" y="222" key="run.anything.popup/0.0.1504.963@0.0.1504.963" timestamp="1618139287957" />
+    <state x="415" y="206" width="672" height="678" key="search.everywhere.popup" timestamp="1618143927682">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="415" y="206" width="672" height="678" key="search.everywhere.popup/0.0.1504.963@0.0.1504.963" timestamp="1618143927682" />
   </component>
 </project>

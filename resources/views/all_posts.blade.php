@@ -33,30 +33,34 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td><img src="https://ps.w.org/simple-full-screen-background-image/assets/icon-256x256.png?rev=2006030" alt=""></td>
-                        <td class="align-middle">Vuk Zdravkovic</td>
-                        <td class="align-middle">Sve o IT</td>
-                        <td class="align-middle">Some text is there ajde bre k....</td>
-                        <td class="align-middle">
-                            <div class="w-100 ">
+
+                    @foreach($posts as $post)
+                        <tr>
+                            <td><img class="imageSizeMyBlog" style="width: 70px; height: 70px; object-fit: cover;" src="/blogImage/{{$post->image}}"  alt="" ></td>
+                            <td class="align-middle">{{$post->user->name}}</td>
+                            <td class="align-middle">{{Str::limit($post->title, 35)}}</td>
+                            <td class="align-middle">{{Str::limit($post->description, 40)}}</td>
+                            <td class="align-middle">
+                                <div class="w-100 ">
 
 
-                                <form action="/notaccept" method="delete">
-                                    <input type="hidden" name="blog_id" id="blog_id" value="">
-                                    <button type="submit" class="btn  btn-danger"><i class="fas fa-trash-alt"></i></button>
-                                </form>
-                            </div>
+                                    <form action="/notaccept" method="delete">
+                                        <input type="hidden" name="blog_id" id="blog_id" value="{{$post->id}}">
+                                        <button type="submit" class="btn  btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </form>
+                                </div>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
+                            </td>
+                        </tr>
+                    @endforeach
+
 
                     </tbody>
                 </table>
+                <br>
+                <div class="text-center" >
+                    {{ $posts->links() }}
+                </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12"></div>
         </div>
