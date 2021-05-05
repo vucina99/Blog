@@ -52,7 +52,7 @@
 
 
                 @endif
-
+                    <a class="nav-item nav-link active" href="/contact">Contact</a>
             </div>
         </div>
 
