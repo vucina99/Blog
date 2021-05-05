@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\BlogResource;
 use App\Models\Blog;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -10,22 +12,26 @@ use Illuminate\Support\Facades\File;
 class BlogController extends Controller
 {
     public function home(){
+
         if(Auth::check() && Auth::user()->is_admin == 1){
             $countPosts = Blog::where("active" , 0)->count();
             $posts = Blog::where("active" , 1)->simplePaginate(20);
             return view("posts" , compact("posts" , "countPosts"));
         }
         $posts = Blog::where("active" , 1)->simplePaginate(20);
-        return view("posts" , compact("posts"));
+        $categories = Category::all();
+        return view("posts" , compact("posts" , "categories"));
     }
     public function createPost(){
-        return view("create_blog");
+        $categories = Category::all();
+        return view("create_blog", compact("categories"));
     }
     public function postCreate(Request $request){
         $this->validate($request, [
             "title" => "required|min:2|max:50",
-            "description" => "required|min:2|max:1000",
-            "image" => "required|max:2048"
+            "description" => "required|min:2|max:2000",
+            "image" => "required|max:2048",
+            "category" => "required"
         ]);
         $post = new Blog();
         $post->title = $request->title;
@@ -36,7 +42,7 @@ class BlogController extends Controller
         $post->image = $imageName;
 
         $post->user_id = Auth::user()->id;
-
+        $post->category_id = $request->category;
         $post->save();
 
         return back()->with("successMessage" , "You have successfully created a post, it will be processed soon");
@@ -116,5 +122,24 @@ class BlogController extends Controller
         }
 
         return view("showPost" , compact("post"));
+    }
+
+
+    public function searchText(Request $request){
+        $blogs = Blog::where("title" , "LIKE" , "%$request->text%")->get();
+        return response()->json([
+           "data" => BlogResource::collection($blogs)
+        ]);
+       // return response(BlogResource::collection($blogs));
+    }
+
+    public function searchCategory(Request $request){
+        $category = Category::where("name" , $request->category)->first();
+
+        $blogs = Blog::where("category_id" , $category->id)->get();
+
+        return response()->json([
+            "data" => BlogResource::collection($blogs)
+        ]);
     }
 }

@@ -15,14 +15,15 @@ use \App\Http\Controllers\AdminController;
 |
 */
 
-
 Route::get("/", [BlogController::class, 'home']);
+
 
 Route::get("/show/post/{id}", [BlogController::class, 'showPost']);
 
 Route::middleware(["auth"])->group(function(){
     Route::get("/logout", [AuthController::class, 'logout']);
     Route::post("/notaccept", [BlogController::class, 'notAccept']);
+
 });
 
 
@@ -32,6 +33,7 @@ Route::middleware(["guest"])->group(function(){
     Route::post("/register/user", [AuthController::class, 'registerUser']);
     Route::post("/login/user", [AuthController::class, 'loginUser']);
 
+
 });
 
 Route::middleware(["AdminMiddle"])->group(function(){
@@ -39,6 +41,7 @@ Route::middleware(["AdminMiddle"])->group(function(){
     Route::get("/inactive/posts", [AdminController::class, 'inactiveBlog']);
     Route::post("/accept/post", [AdminController::class, 'acceptPost']);
     Route::get("/all/posts", [AdminController::class, 'allPosts']);
+    Route::get("/category", [AdminController::class, 'categories']);
 
 
 });

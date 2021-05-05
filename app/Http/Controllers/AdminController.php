@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,6 +14,12 @@ class AdminController extends Controller
         $countPosts = Blog::where("active" , 0)->count();
         $users = User::where("id" , "!=" , Auth::user()->id)->simplePaginate(15);
         return view("all_users" , compact("users" , "countPosts"));
+    }
+
+    public function categories(){
+        $countPosts = Blog::where("active" , 0)->count();
+
+        return view("category", compact("countPosts"));
     }
 
     public function inactiveBlog(){
@@ -35,6 +42,20 @@ class AdminController extends Controller
         $post->save();
         return back()->with("successAccepted" , "Post is successfully accepted");
 
+    }
+
+    public function createCategory(Request $request){
+        if($request->category == ""){
+            return response()->json([
+                "messageError" => "Please enter name of category"
+            ]);
+        }
+        $category = new Category();
+        $category->name = $request->category;
+        $category->save();
+        return response()->json([
+            "message" => "Category is successfully uploaded"
+        ]);
     }
 
     public function allPosts(){
