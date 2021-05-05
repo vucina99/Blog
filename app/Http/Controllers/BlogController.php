@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\BlogResource;
+use App\Mail\sendEmail;
 use App\Models\Blog;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 
 class BlogController extends Controller
 {
@@ -141,5 +143,24 @@ class BlogController extends Controller
         return response()->json([
             "data" => BlogResource::collection($blogs)
         ]);
+    }
+
+    public function contact(){
+        return view("contact");
+    }
+
+    public function mailSend(Request $request){
+        $this->validate($request,[
+            "email" => "required|email",
+            "description" => "required|max:1000"
+        ]);
+
+        $content = [
+            "email" => $request->email,
+            "description" => $request->description
+        ];
+        Mail::to("vuk.zdravkovic.53.18@ict.edu.rs")->send(new sendEmail($content));
+
+        return back()->with("successMessage" , "Success send message");
     }
 }

@@ -17,6 +17,10 @@ use \App\Http\Controllers\AdminController;
 
 Route::get("/", [BlogController::class, 'home']);
 
+Route::get("/contact", [BlogController::class, 'contact']);
+Route::post("/sendEmail", [BlogController::class, 'mailSend']);
+
+
 
 Route::get("/show/post/{id}", [BlogController::class, 'showPost']);
 
